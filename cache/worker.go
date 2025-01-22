@@ -33,7 +33,7 @@ func newWorker(defaultExpiration time.Duration) *worker {
 	}
 }
 
-func (w *worker) Set(key string, objewt interface{}, expiration time.Duration) {
+func (w *worker) Set(key string, object interface{}, expiration time.Duration) {
 	var exp int64
 
 	if expiration == DefaultExpiration {
@@ -46,7 +46,7 @@ func (w *worker) Set(key string, objewt interface{}, expiration time.Duration) {
 
 	w.mu.Lock()
 
-	w.items[key] = *newItem(exp, objewt)
+	w.items[key] = *newItem(exp, object)
 
 	w.mu.Unlock()
 }
