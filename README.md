@@ -6,7 +6,7 @@ Blazecache is a distributed in-memory caching http server based on Raft Algorith
 
 Make sure the following dependencies are installed:
 - [Go](https://golang.org/dl/)
-- 
+  
 ### Running
 
 Start :
